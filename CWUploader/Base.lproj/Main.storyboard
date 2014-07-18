@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFO-GU-4yS">
+                                <rect key="frame" x="198" y="410" width="84" height="30"/>
+                                <state key="normal" title="Take Picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePictureAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="skT-bk-KJB"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kJM-g1-FOi">
+                                <rect key="frame" x="120" y="20" width="240" height="375"/>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="iaI-lA-bCH">
+                                <rect key="frame" x="222" y="189" width="37" height="37"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kJM-g1-FOi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="120" id="9Dz-3W-XXv"/>
+                            <constraint firstAttribute="centerX" secondItem="xFO-GU-4yS" secondAttribute="centerX" id="Aj9-zn-uL6"/>
+                            <constraint firstAttribute="centerX" secondItem="kJM-g1-FOi" secondAttribute="centerX" id="JGO-rc-r10"/>
+                            <constraint firstAttribute="trailing" secondItem="kJM-g1-FOi" secondAttribute="trailing" constant="120" id="JHZ-TK-EEI"/>
+                            <constraint firstAttribute="centerX" secondItem="iaI-lA-bCH" secondAttribute="centerX" id="k4m-u5-zBf"/>
+                            <constraint firstItem="kJM-g1-FOi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="nel-d4-pPn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xFO-GU-4yS" secondAttribute="bottom" constant="10" id="oOT-qT-fhX"/>
+                            <constraint firstItem="xFO-GU-4yS" firstAttribute="top" secondItem="kJM-g1-FOi" secondAttribute="bottom" constant="15" id="rv4-j6-sWQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadingActivityIndicatorView" destination="iaI-lA-bCH" id="pu4-M1-UvU"/>
+                        <outlet property="resultImageView" destination="kJM-g1-FOi" id="qhO-YQ-KbH"/>
+                        <outlet property="takePictureButton" destination="xFO-GU-4yS" id="AcD-yq-525"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
